@@ -1,0 +1,39 @@
+/*
+* main content for the Cubbard
+*/
+
+.container {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	background-color: $white;
+}
+
+/*
+* content for the landing (sign-up) page
+*/
+
+.loginWrap {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0;
+	background-color: #e2f9d0;
+	padding: 10px;
+	@include border-box;
+	text-align: right;
+}
+
+label[for="login"] {
+	display: inline;
+}
+
+form[name="login"] {
+	display: inline;
+	margin: 0;
+
+}
+
+form[name="sign-up"] {
+
+}
+
