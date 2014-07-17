@@ -9,7 +9,7 @@
 	<div class="container">
 		<div class="loginWrap">
 			<form action="" method="POST" name="login">
-			<label for="login">Login</label>
+			<label for="login">login</label>
 				<input type="text" name="email" placeholder="email" autocomplete="off" />
 				<input type="password" name="password" placeholder="password" autocomplete="off" />
 				<input type="submit" value="login" />
