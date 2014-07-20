@@ -27,6 +27,8 @@ p {
   font-family: sans-serif;
   text-align: center;
   background-color: #333333;
+  box-shadow: 0 2px 3px black;
+  margin-bottom: 10px;
 }
 
 [role="navigation"] {
@@ -146,7 +148,7 @@ form[name="login"] {
 form[name="sign-up"] input {
   border: none;
   height: 26px;
-  font-size: 20px;
+  font-size: 16px;
   box-shadow: 0 0 2px #333333 inset;
   border-radius: 3px;
   -webkit-box-sizing: border-box;
@@ -161,11 +163,11 @@ form[name="sign-up"] input[type="text"], form[name="sign-up"] input[type="passwo
   width: 100%;
 }
 form[name="sign-up"] input[name="fname"], form[name="sign-up"] input[name="lname"] {
-  float: left;
   width: 48%;
 }
 form[name="sign-up"] input[name="fname"] {
   margin-right: 4%;
+  float: left;
 }
 form[name="sign-up"] input[name="lname"] {
   margin: 0;

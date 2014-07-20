@@ -81,11 +81,11 @@ form[name="sign-up"] {
 		width: 100%;
 	}
 	input[name="fname"], input[name="lname"] {
-		float: left;
 		width: 48%;
 	}
 	input[name="fname"] {
 		margin-right: 4%; 
+		float: left;
 	}
 	input[name="lname"] {
 		margin: 0;
