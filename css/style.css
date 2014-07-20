@@ -143,11 +143,36 @@ form[name="login"] {
   float: right;
 }
 
+form[name="sign-up"] input {
+  border: none;
+  height: 26px;
+  font-size: 20px;
+  box-shadow: 0 0 2px #333333 inset;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 3px;
+  color: #4d4d4d;
+}
 form[name="sign-up"] input[type="text"], form[name="sign-up"] input[type="password"] {
   display: block;
   margin-bottom: 7px;
   width: 100%;
 }
 form[name="sign-up"] input[name="fname"], form[name="sign-up"] input[name="lname"] {
-  display: inline;
+  float: left;
+  width: 48%;
+}
+form[name="sign-up"] input[name="fname"] {
+  margin-right: 4%;
+}
+form[name="sign-up"] input[name="lname"] {
+  margin: 0;
+}
+form[name="sign-up"] input[type="submit"] {
+  background-color: #333333;
+  color: white;
+  font-size: 16px;
+  padding: 3px;
 }
