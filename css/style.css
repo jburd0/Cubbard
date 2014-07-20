@@ -69,6 +69,21 @@ form[role="search"] input[type="text"] {
   background-color: white;
 }
 
+.footer {
+  width: 100%;
+  max-width: 1000px;
+  background-color: gray;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+.footer p {
+  color: white;
+}
+
 /*
 * content for the landing (sign-up) page
 */
@@ -91,4 +106,48 @@ label[for="login"] {
 form[name="login"] {
   display: inline;
   margin: 0;
+}
+
+.signUp {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  zoom: 1;
+}
+.signUp > div {
+  float: left;
+  margin-right: 2%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.signUp:before, .signUp:after {
+  content: "";
+  display: table;
+}
+.signUp:after {
+  clear: both;
+}
+.signUp > div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.signUp .suWrap {
+  width: 32%;
+}
+.signUp .suDisplay {
+  width: 66%;
+  margin-right: 0;
+  float: right;
+}
+
+form[name="sign-up"] input[type="text"], form[name="sign-up"] input[type="password"] {
+  display: block;
+  margin-bottom: 7px;
+  width: 100%;
+}
+form[name="sign-up"] input[name="fname"], form[name="sign-up"] input[name="lname"] {
+  display: inline;
 }

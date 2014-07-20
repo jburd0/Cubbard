@@ -9,6 +9,20 @@
 	background-color: $white;
 }
 
+.footer {
+	width: 100%;
+	max-width: 1000px;
+	background-color: $grey50;
+	margin: 0;
+	@include border-box;
+	padding: 10px;
+	text-align: center;
+
+	p {
+		color: white;
+	}
+}
+
 /*
 * content for the landing (sign-up) page
 */
@@ -33,7 +47,32 @@ form[name="login"] {
 
 }
 
+.signUp {
+	@include row;
+
+	& > div {
+		@include border-box;
+		padding: 10px;
+	}
+	.suWrap {
+		width: columns(2);
+	}
+	.suDisplay {
+		width: columns(4);
+		@include last;
+	}
+}
+
 form[name="sign-up"] {
 
+	input[type="text"], input[type="password"] {
+		display: block;
+		margin-bottom: 7px;
+		width: 100%;
+	}
+	input[name="fname"], input[name="lname"] {
+		display: inline;
+	}
 }
+
 
