@@ -8,7 +8,10 @@
 	padding: 10px 0;
 	font-family: sans-serif;
 	text-align: center;
-	background-color: $grey80;}
+	background-color: $grey80;
+	box-shadow: 0 2px 3px $black;
+	margin-bottom: 10px;
+}
 
 [role="navigation"] {
 	padding: 10px;
