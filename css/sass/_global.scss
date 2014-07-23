@@ -17,6 +17,8 @@ input {
 	border: none;
 	height: 26px;
 	font-size: 16px;
+	-webkit-box-shadow: 0 0 2px $grey80 inset;
+	-moz-box-shadow: 0 0 2px $grey80 inset;
 	box-shadow: 0 0 2px $grey80 inset;
 	border-radius: 3px;
 	@include border-box; 
@@ -95,11 +97,11 @@ form[name="sign-up"] {
 		width: 100%;
 	}
 	input[name="fname"], input[name="lname"] {
-		float: left;
 		width: 48%;
 	}
 	input[name="fname"] {
 		margin-right: 4%; 
+		float: left;
 	}
 	input[name="lname"] {
 		margin: 0;
