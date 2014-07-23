@@ -9,6 +9,30 @@
 	background-color: $white;
 }
 
+/*
+* universal rules for form input elements
+*/
+
+input {
+	border: none;
+	height: 26px;
+	font-size: 16px;
+	box-shadow: 0 0 2px $grey80 inset;
+	border-radius: 3px;
+	@include border-box; 
+	padding: 3px;
+	color: $grey70;
+}
+
+input[type="submit"] {
+	border: none;
+	background-color: $grey80;
+	color: $white;
+	font-size: 16px;
+	padding: 3px;
+	border-radius: 3px;
+}
+
 .footer {
 	width: 100%;
 	max-width: 1000px;
@@ -65,16 +89,6 @@ form[name="login"] {
 
 form[name="sign-up"] {
 
-	input {
-		border: none;
-		height: 26px;
-		font-size: 16px;
-		box-shadow: 0 0 2px $grey80 inset;
-		border-radius: 3px;
-		@include border-box; 
-		padding: 3px;
-		color: $grey70;
-	}
 	input[type="text"], input[type="password"] {
 		display: block;
 		margin-bottom: 7px;
@@ -91,10 +105,7 @@ form[name="sign-up"] {
 		margin: 0;
 	}
 	input[type="submit"] {
-		background-color: $grey80;
 		color: $white;
-		font-size: 16px;
-		padding: 3px;
 	}
 }
 
