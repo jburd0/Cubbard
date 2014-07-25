@@ -29,7 +29,7 @@ $(document).ready(function() {
 	});
 	$('.required').blur(function() {
 		if($(this).val() == '' || $(this).val() == $(this).data('value')) {
-			$(this).css({"border" : "1px solid #c35151", "background-color" : "#e8bfbf"});
+			$(this).css({"border" : "2px solid #c35151", "background-color" : "#e8bfbf"});
 			$(this).val($(this).data('value'));
 			// return a false value
 			$(this).data('isSet', false);
