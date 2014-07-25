@@ -3,6 +3,8 @@
 <title>Welcome to Cubbard</title>
 <link rel="stylesheet" href="./css/style.css" />
 <link rel="shortcut icon" href="./favicon.ico" />
+<script src="./js/jquery.js"></script>
+<script src="./js/forms.js"></script>
 </head>
 <body>
 <?php include("header.php"); ?>
@@ -10,10 +12,10 @@
 
 		<section class="main">
 			<div class="loginWrap">
-				<form action="" method="POST" name="login">
+				<form name="login" action="" method="POST">
 				<label for="login">Login</label>
-					<input type="text" name="email" placeholder="email" autocomplete="off" />
-					<input type="password" name="password" placeholder="password" autocomplete="off" />
+					<input class="nonRequired" type="test" name="email" value="email" autocomplete="off" />
+					<input class="nonRequired" type="password" name="password" value="password" autocomplete="off" />
 					<input type="submit" value="login" />
 				</form>
 			</div>
@@ -22,12 +24,14 @@
 				<div class="suWrap">
 					<h2>Sign Up</h2>
 					<form action="" method="POST" name="sign-up">
-						<input type="text" name="fname" size="10" placeholder="First Name" autocomplete="off" />
-						<input type="text" name="lname" size="10" placeholder="Last Name" autocomplete="off" />
-						<input type="text" name="email" placeholder="Email" autocomplete="off" />
-						<input type="text" name="confim-email" placeholder="Confirm Email" autocomplete="off" />
-						<input type="password" name="password" placeholder="Password" autocomplete="off" />
+						<input class="required" type="text" name="fname" size="10" value="First Name" autocomplete="off" />
+						<input class="required" type="text" name="lname" size="10" value="Last Name" autocomplete="off" />
+						<input class="required" type="text" name="email" value="Email" autocomplete="off" />
+						<input class="required" type="text" name="confim-email" value="Confirm Email" autocomplete="off" />
+						<input class="required" type="password" name="password" value="Password" autocomplete="off" />
+						<span id="checker">
 						<input type="submit" value="Sign Up" />
+						</span>
 					</form>
 				</div>
 				<div class="suDisplay">

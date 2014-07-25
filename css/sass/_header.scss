@@ -9,8 +9,10 @@
 	font-family: sans-serif;
 	text-align: center;
 	background-color: $grey80;
-	box-shadow: 0 2px 3px $black;
-	margin-bottom: 10px;
+
+	h2 {
+		color: $grey80;
+	}
 }
 
 [role="navigation"] {
