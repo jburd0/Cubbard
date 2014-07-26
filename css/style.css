@@ -31,14 +31,36 @@ p {
 .header h2 {
   color: #333333;
 }
-
-[role="navigation"] {
-  padding: 10px;
-  width: 100%;
-  max-width: 1000px;
+.header img[role='mainLogo'] {
+  cursor: pointer;
 }
 
-ul[role="link-bar"] {
+[role="navigation"] {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  zoom: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+}
+[role="navigation"] > div {
+  float: left;
+  margin-right: 2%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+[role="navigation"]:before, [role="navigation"]:after {
+  content: "";
+  display: table;
+}
+[role="navigation"]:after {
+  clear: both;
+}
+
+ul[role="linkBar"] {
   list-style-type: none;
   display: inline;
   float: left;
@@ -46,10 +68,10 @@ ul[role="link-bar"] {
   padding: 5px 0;
   text-align: right;
 }
-ul[role="link-bar"] li {
+ul[role="linkBar"] li {
   display: inline;
 }
-ul[role="link-bar"] li a {
+ul[role="linkBar"] li a {
   text-decoration: none;
 }
 
@@ -87,13 +109,11 @@ form[role="search"] input[type="text"] {
 * universal rules for form input elements
 */
 input {
+  outline-width: 0;
   border: none;
   border: 2px solid #666666;
   height: 35px;
   font-size: 16px;
-  -webkit-box-shadow: 0 0 2px #333333 inset;
-  -moz-box-shadow: 0 0 2px #333333 inset;
-  box-shadow: 0 0 2px #333333 inset;
   border-radius: 3px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -103,12 +123,21 @@ input {
 }
 
 input[type="submit"] {
+  cursor: pointer;
   border: none;
   background-color: #333333;
   color: white;
   font-size: 16px;
   padding: 3px;
   border-radius: 3px;
+}
+
+input[role='status'] {
+  border: none;
+  display: inline-block;
+  margin: 0;
+  height: 35px;
+  width: 5%;
 }
 
 .footer {
@@ -133,7 +162,7 @@ input[type="submit"] {
   width: 100%;
   max-width: 1000px;
   margin: 0;
-  background-color: #e2f9d0;
+  background-color: #cccccc;
   padding: 10px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -141,7 +170,8 @@ input[type="submit"] {
   text-align: right;
 }
 
-label[for="login"] {
+h3[for="login"] {
+  font-weight: bold;
   display: inline;
 }
 
@@ -186,20 +216,50 @@ form[name="login"] {
 }
 
 form[name="sign-up"] input[type="text"], form[name="sign-up"] input[type="password"] {
-  display: block;
-  margin-bottom: 7px;
-  width: 100%;
+  display: inline;
+  margin-bottom: 10px;
+  width: 95%;
 }
 form[name="sign-up"] input[name="fname"], form[name="sign-up"] input[name="lname"] {
-  width: 48%;
+  margin: 0 0 10px 0;
+  width: 44.5%;
 }
 form[name="sign-up"] input[name="fname"] {
-  margin-right: 4%;
-  float: left;
+  margin-right: 0;
 }
 form[name="sign-up"] input[name="lname"] {
   margin: 0;
 }
 form[name="sign-up"] input[type="submit"] {
+  color: white;
+}
+
+.welcome {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  zoom: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 1.5em;
+  background-color: #666666;
+}
+.welcome > div {
+  float: left;
+  margin-right: 2%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.welcome:before, .welcome:after {
+  content: "";
+  display: table;
+}
+.welcome:after {
+  clear: both;
+}
+.welcome h1 {
   color: white;
 }

@@ -1,7 +1,7 @@
-	// ****************************************************** //
-	// ** This is the Garren Ijames form validation script ** //
-	// ************** 2014 Cubbard productions ************** //
-	// ****************************************************** //
+// ****************************************************** //
+// ** This is the Garren Ijames form validation script ** //
+// ************** 2014 Cubbard productions ************** //
+// ****************************************************** //
 
 $(document).ready(function() {
 	//
@@ -36,6 +36,7 @@ $(document).ready(function() {
 		} else {
 			// form is complete 
 			$(this).data('isSet', true);
+			$(this).css({"border" : "2px solid #666666", "background-color" : "white"});
 		}
 		//
 		// we assume all fields are empty or not filled out correctly

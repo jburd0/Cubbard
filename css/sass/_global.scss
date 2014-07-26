@@ -14,13 +14,11 @@
 */
 
 input {
+	outline-width: 0;
 	border: none;
 	border: 2px solid $grey60; 
 	height: 35px;
 	font-size: 16px;
-	-webkit-box-shadow: 0 0 2px $grey80 inset;
-	-moz-box-shadow: 0 0 2px $grey80 inset;
-	box-shadow: 0 0 2px $grey80 inset;
 	border-radius: 3px;
 	@include border-box; 
 	padding: 3px;
@@ -28,6 +26,7 @@ input {
 }
 
 input[type="submit"] {
+	cursor: pointer;
 	border: none;
 	background-color: $grey80;
 	color: $white;
@@ -35,6 +34,15 @@ input[type="submit"] {
 	padding: 3px;
 	border-radius: 3px;
 }
+
+input[role='status'] {
+	border: none;
+	display: inline-block;
+	margin: 0;
+	height: 35px;
+	width: 5%;
+}
+	
 
 .footer {
 	width: 100%;
@@ -58,13 +66,14 @@ input[type="submit"] {
 	width: 100%;
 	max-width: 1000px;
 	margin: 0;
-	background-color: #e2f9d0;
+	background-color: $grey20;
 	padding: 10px;
 	@include border-box;
 	text-align: right;
 }
 
-label[for="login"] {
+h3[for="login"] {
+	font-weight: bold;
 	display: inline;
 }
 
@@ -93,16 +102,16 @@ form[name="login"] {
 form[name="sign-up"] {
 
 	input[type="text"], input[type="password"] {
-		display: block;
-		margin-bottom: 7px;
-		width: 100%;
+		display: inline;
+		margin-bottom: 10px;
+		width: 95%;
 	}
 	input[name="fname"], input[name="lname"] {
-		width: 48%;
+		margin: 0 0 10px 0;
+		width: 44.5%;
 	}
 	input[name="fname"] {
-		margin-right: 4%; 
-		float: left;
+		margin-right: 0; 
 	}
 	input[name="lname"] {
 		margin: 0;
@@ -112,4 +121,14 @@ form[name="sign-up"] {
 	}
 }
 
+.welcome {
+	@include row;
+	@include border-box;
+	padding: 10px;
+	font-size: 1.5em;
+	background-color: $grey60;
 
+	h1 {
+		color: $white; 
+	}
+}
