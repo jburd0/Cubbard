@@ -188,13 +188,15 @@ form[name="sign-up"] {
 		height: 777px;
 	}
 	.user-info {
-		min-width: 330px;
+		width: 330px;
+		max-width: 330px;
 		border-right: 1px solid $grey20;
 		background-color: $white;
 		padding: 10px;
 	}
 	.user-feed {
-		min-width: 668px;
+		width: 668px;
+		max-width: 668px;
 		overflow-y: auto;
 	}
 }

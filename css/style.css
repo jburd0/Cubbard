@@ -272,12 +272,14 @@ form[name="sign-up"] input[role='status'] {
     margin: 0;
     height: 777px; }
   .user-profile .user-info {
-    min-width: 330px;
+    width: 330px;
+    max-width: 330px;
     border-right: 1px solid #cccccc;
     background-color: white;
     padding: 10px; }
   .user-profile .user-feed {
-    min-width: 668px;
+    width: 668px;
+    max-width: 668px;
     overflow-y: auto; }
 
 div[role='feed-header'] {
