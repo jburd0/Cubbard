@@ -153,6 +153,15 @@ input[type="submit"] {
 .welcome {
   padding: 10px;
   background-color: white;
+  display: table;
+}
+.welcome ul {
+  list-style-type: none;
+  display: table-cell;
+  text-align: right;
+}
+.welcome li {
+  display: inline;
 }
 
 /*
@@ -235,7 +244,3 @@ input[role='status'] {
   height: 35px;
   width: 5%;
 }
-
-/*
-* content for the landing (sign-up) page
-*/

@@ -15,6 +15,9 @@
 
 			<section class="welcome">
 				<h1>Welcome</h1>
+				<ul>
+					<li><img id="slider" src="./img/arrowDown.png" height="16px" alt="down" /></li>
+				</ul>
 			</section>
 
 			<div class="login">

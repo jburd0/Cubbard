@@ -12,13 +12,15 @@ $(document).ready(function() {
 	//
 	// expand the header div and fade in the main logo
 	//
-	$('.header').hover(function() {
-		$(this).stop().animate({"margin-top": "0"});
-		$(".header img[role='mainLogo']").stop().fadeIn();
-	},
-	function() {
-		$(".header img[role='mainLogo']").stop().fadeOut();
-		$(this).stop().animate({"margin-top": "-218px"});
+	$("#slider").click(function() {
+		if($(this).attr('src') == './img/arrowDown.png') {
+			$(this).attr('src', './img/arrowUp');
+			$('.header').stop().animate({"margin-top": "0"});
+			$(".header img[role='mainLogo']").stop().fadeIn();
+		} else {
+			$(this).attr('src', './img/arrowDown.png');
+			$(".header img[role='mainLogo']").stop().fadeOut();
+			$('.header').stop().animate({"margin-top": "-218px"});
+		}
 	})
-
 });
