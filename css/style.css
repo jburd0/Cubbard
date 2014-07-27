@@ -6,7 +6,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #1a1a1a;
+  color: #4d4d4d;
   margin: 0;
   line-height: 2;
 }
@@ -22,7 +22,11 @@ p {
 */
 .header {
   width: 100%;
-  margin: 0;
+  height: 220px;
+  margin-top: -218px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   padding: 10px 0;
   font-family: sans-serif;
   text-align: center;
@@ -44,6 +48,7 @@ p {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px;
+  margin-bottom: 5px;
 }
 [role="navigation"] > div {
   float: left;
@@ -87,31 +92,10 @@ form[role="search"] input[type="text"] {
 /*
 * instructions concerning forms and input fields
 */
-.asterFill {
-  display: inline;
-  font-weight: bold;
-  font-size: 16px;
-  vertical-align: middle;
-  color: red;
-}
-
-/*
-* main content for the Cubbard
-*/
-.container {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  background-color: white;
-}
-
-/*
-* universal rules for form input elements
-*/
 input {
   outline-width: 0;
   border: none;
-  border: 2px solid #666666;
+  border: 2px solid #999999;
   height: 35px;
   font-size: 16px;
   border-radius: 3px;
@@ -119,7 +103,7 @@ input {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 3px;
-  color: #4d4d4d;
+  color: gray;
 }
 
 input[type="submit"] {
@@ -132,41 +116,51 @@ input[type="submit"] {
   border-radius: 3px;
 }
 
-input[role='status'] {
-  border: none;
-  display: inline-block;
-  margin: 0;
-  height: 35px;
-  width: 5%;
-}
-
-.footer {
+/*
+* main content for the Cubbard
+*/
+.container, .welcome, .login, .sign-up, .footer, .login {
   width: 100%;
   max-width: 1000px;
-  background-color: gray;
-  margin: 0;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  zoom: 1;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 10px;
-  text-align: center;
+  border: 1px solid #cccccc;
 }
-.footer p {
-  color: white;
+.container > div, .welcome > div, .login > div, .sign-up > div, .footer > div, .login > div {
+  float: left;
+  margin-right: 2%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.container:before, .container:after, .welcome:before, .welcome:after, .login:before, .login:after, .sign-up:before, .sign-up:after, .footer:before, .footer:after, .login:before, .login:after {
+  content: "";
+  display: table;
+}
+.container:after, .welcome:after, .login:after, .sign-up:after, .footer:after, .login:after {
+  clear: both;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.welcome {
+  padding: 10px;
+  background-color: white;
 }
 
 /*
-* content for the landing (sign-up) page
+* login section
 */
-.loginWrap {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0;
-  background-color: #cccccc;
+.login {
+  background-color: white;
   padding: 10px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   text-align: right;
 }
 
@@ -180,36 +174,23 @@ form[name="login"] {
   margin: 0;
 }
 
-.signUp {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  zoom: 1;
+/*
+* -- sign-up section --
+*/
+.sign-up {
+  background-color: white;
+  border-radius: 3px;
 }
-.signUp > div {
-  float: left;
-  margin-right: 2%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.signUp:before, .signUp:after {
-  content: "";
-  display: table;
-}
-.signUp:after {
-  clear: both;
-}
-.signUp > div {
+.sign-up > div {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 20px;
 }
-.signUp .suWrap {
+.sign-up .suWrap {
   width: 40.5%;
 }
-.signUp .suDisplay {
+.sign-up .suDisplay {
   width: 57.5%;
   margin-right: 0;
   float: right;
@@ -234,32 +215,27 @@ form[name="sign-up"] input[type="submit"] {
   color: white;
 }
 
-.welcome {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  zoom: 1;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+/*
+* -- footer --
+*/
+.footer {
+  background-color: white;
+  margin: 0;
   padding: 10px;
-  font-size: 1.5em;
-  background-color: #666666;
+  text-align: center;
 }
-.welcome > div {
-  float: left;
-  margin-right: 2%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+
+/*
+* universal rules for form input elements
+*/
+input[role='status'] {
+  border: none;
+  display: inline-block;
+  margin: 0;
+  height: 35px;
+  width: 5%;
 }
-.welcome:before, .welcome:after {
-  content: "";
-  display: table;
-}
-.welcome:after {
-  clear: both;
-}
-.welcome h1 {
-  color: white;
-}
+
+/*
+* content for the landing (sign-up) page
+*/

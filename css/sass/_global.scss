@@ -2,73 +2,30 @@
 * main content for the Cubbard
 */
 
-.container {
+.container, .welcome, .login, .sign-up, .footer, .login {
 	width: 100%;
 	max-width: 1000px;
+	@include row;
+	@include border-box;
+	border: 1px solid $grey20;
+}
+
+.container {
 	margin: 0 auto;
+}
+
+.welcome {
+	padding: 10px;
 	background-color: $white;
 }
 
 /*
-* universal rules for form input elements
+* login section
 */
 
-input {
-	outline-width: 0;
-	border: none;
-	border: 2px solid $grey60; 
-	height: 35px;
-	font-size: 16px;
-	border-radius: 3px;
-	@include border-box; 
-	padding: 3px;
-	color: $grey70;
-}
-
-input[type="submit"] {
-	cursor: pointer;
-	border: none;
-	background-color: $grey80;
-	color: $white;
-	font-size: 16px;
-	padding: 3px;
-	border-radius: 3px;
-}
-
-input[role='status'] {
-	border: none;
-	display: inline-block;
-	margin: 0;
-	height: 35px;
-	width: 5%;
-}
-	
-
-.footer {
-	width: 100%;
-	max-width: 1000px;
-	background-color: $grey50;
-	margin: 0;
-	@include border-box;
+.login {
+	background-color: $white;
 	padding: 10px;
-	text-align: center;
-
-	p {
-		color: white;
-	}
-}
-
-/*
-* content for the landing (sign-up) page
-*/
-
-.loginWrap {
-	width: 100%;
-	max-width: 1000px;
-	margin: 0;
-	background-color: $grey20;
-	padding: 10px;
-	@include border-box;
 	text-align: right;
 }
 
@@ -83,8 +40,13 @@ form[name="login"] {
 
 }
 
-.signUp {
-	@include row;
+/*
+* -- sign-up section --
+*/
+
+.sign-up {
+	background-color: $white;
+	border-radius: 3px;
 
 	& > div {
 		@include border-box;
@@ -97,6 +59,7 @@ form[name="login"] {
 		width: columns(3.5);
 		@include last;
 	}
+
 }
 
 form[name="sign-up"] {
@@ -121,14 +84,36 @@ form[name="sign-up"] {
 	}
 }
 
-.welcome {
-	@include row;
-	@include border-box;
-	padding: 10px;
-	font-size: 1.5em;
-	background-color: $grey60;
+/*
+* -- footer --
+*/
 
-	h1 {
-		color: $white; 
-	}
+.footer {
+	background-color: $white;
+	margin: 0;
+	padding: 10px;
+	text-align: center;
 }
+
+/*
+* universal rules for form input elements
+*/
+
+
+input[role='status'] {
+	border: none;
+	display: inline-block;
+	margin: 0;
+	height: 35px;
+	width: 5%;
+}
+	
+
+
+/*
+* content for the landing (sign-up) page
+*/
+
+
+
+

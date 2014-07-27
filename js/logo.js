@@ -12,13 +12,13 @@ $(document).ready(function() {
 	//
 	// expand the header div and fade in the main logo
 	//
-	$('.header').css({"height" : "0"}).hover(function() {
-		$(this).stop().animate({"height": "220px"});
+	$('.header').hover(function() {
+		$(this).stop().animate({"margin-top": "0"});
 		$(".header img[role='mainLogo']").stop().fadeIn();
 	},
 	function() {
-		$(".header img[role='mainLogo']").fadeOut();
-		$(this).stop().animate({"height": "0"});
+		$(".header img[role='mainLogo']").stop().fadeOut();
+		$(this).stop().animate({"margin-top": "-218px"});
 	})
 
 });

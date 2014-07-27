@@ -11,12 +11,13 @@
 <?php include("header.php"); ?>
 	<div class="container">
 
-		<section class="welcome">
-			<h1>Welcome</h1>
-		</section>
-
 		<section class="main">
-			<div class="loginWrap">
+
+			<section class="welcome">
+				<h1>Welcome</h1>
+			</section>
+
+			<div class="login">
 				<form name="login" action="" method="POST">
 				<h3 for="login">Login</h3>
 					<input class="nonRequired" type="test" name="email" value="email" autocomplete="off" />
@@ -25,7 +26,7 @@
 				</form>
 			</div>
 
-			<section class="signUp">
+			<section class="sign-up">
 				<div class="suWrap">
 					<h2>Sign Up</h2>
 					<form action="" method="POST" name="sign-up">
