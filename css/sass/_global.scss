@@ -2,7 +2,7 @@
 * main content for the Cubbard
 */
 
-.container, .welcome, .login, .sign-up, .footer, .login {
+.container, .welcome, .login, .sign-up, .footer, .login, .user-utils {
 	width: 100%;
 	max-width: 1000px;
 	@include row;
@@ -14,19 +14,54 @@
 	margin: 0 auto;
 }
 
+/*
+* welcome section (for logged on user and index page
+*/
+
 .welcome {
 	padding: 10px;
 	background-color: $white;
 	display: table;
 
-	ul {
-		list-style-type: none;
-		display: table-cell;
-		text-align: right; 
-	}
+}
+
+ul[role='links'], ul[role='user-display'], ul[role='tool-box'] {
+	list-style-type: none;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0;
+
 	li {
 		display: inline;
+		padding-right: 10px;
+
+		h1 {
+			display: inline;
+		}
 	}
+
+	a {
+		text-decoration: none;
+		color: $base-color;
+	}
+}
+
+ul[role='links'] {
+		text-align: right; 
+}
+
+ul[role='user-display'] {
+		text-align: left; 
+
+}
+
+/*
+* user-utils section
+*/
+
+.user-utils {
+	padding: 10px;
+	background-color: $white;
 }
 
 /*

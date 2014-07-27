@@ -10,22 +10,31 @@
 <body>
 <?php include("header.php"); ?>
 	<div class="container">
-
 		<section class="main">
 
 			<section class="welcome">
-				<h1>Welcome</h1>
+				<ul role="user-display">
+					<li><img src="./img/garren_ijames_777.jpg" height="40px" width="40px" alt="profile picture"/></li>
+					<li><h1><a href="">Garren Ijames</a></h1></li>
+					<li><a href="">logout</a></li>
+					<li><a href="">logout</a></li>
+				</ul>
+				<ul role="links">
+					<li><img id="slider" src="./img/arrowDown.png" height="16px" /></li>
+				</ul>
 			</section>
 
-		</section> <!-- end section.main -->
-			<div role="navigation">
-				<ul role="linkBar">
+			<section class="user-utils">
+				<ul role='tool-box'>
 					<li><a href="">link</a></li>
 					<li><a href="">link</a></li>
 					<li><a href="">link</a></li>
 					<li><a href="">link</a></li>
 				</ul>
-			</div>
+			</section>
+
+		</section> <!-- end section.main -->
+
 		<section class="footer">
 			<p>Copyright 2014 Cubbard</p>
 			<p>A John Burd - Garren Ijames production</p>
