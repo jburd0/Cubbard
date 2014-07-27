@@ -10,7 +10,7 @@
 	max-width: 1000px;
 	@include row;
 	@include border-box;
-	border: 1px solid $grey20;
+	border-bottom: 1px solid $grey20;
 }
 
 .container {
@@ -23,6 +23,8 @@
 */
 
 .welcome {
+	border-left: 1px solid $grey20;
+	border-right: 1px solid $grey20;
 	padding: 10px;
 	background-color: $white;
 	display: table;
@@ -84,6 +86,8 @@ ul[role='tool-box'] {
 */
 
 .login {
+	border-left: 1px solid $grey20;
+	border-right: 1px solid $grey20;
 	background-color: $white;
 	padding: 10px;
 	text-align: right;
@@ -106,6 +110,8 @@ form[name="login"] {
 
 .sign-up {
 	background-color: $white;
+	border-right: 1px solid $grey20;
+	border-left: 1px solid $grey20;
 
 	& > div {
 		@include border-box;
@@ -115,7 +121,7 @@ form[name="login"] {
 		width: columns(2.5);
 		border-right: 1px solid $grey20;
 	}
-	.suDisplay {
+	.suDisplay {	
 		width: columns(3.5);
 		@include last;
 	}
@@ -143,6 +149,7 @@ form[name="sign-up"] {
 		color: $white;
 	}
 	input[role='status'] {
+		display: inline;
 		color: red;
 		font-size: 20px;
 		font-weight: bold;
@@ -155,6 +162,8 @@ form[name="sign-up"] {
 */
 
 .user-utils {
+	border-left: 1px solid $grey20;
+	border-right: 1px solid $grey20;
 	padding: 10px;
 	background-color: $white;
 	margin-bottom: 10px;
@@ -165,24 +174,28 @@ form[name="sign-up"] {
 */
 
 .user-profile {
+	width: 100%;
+	max-width: 1000px;
+	border: 1px solid $grey20;
 	margin-bottom: 10px;
 	height: 777px;
+	display: table;
 
 	& > div {
 		@include border-box;
+		display: table-cell;
+		margin: 0;
+		height: 777px;
 	}
 	.user-info {
-		height: 100%;
-		width: columns(2);
+		min-width: 330px;
 		border-right: 1px solid $grey20;
 		background-color: $white;
 		padding: 10px;
 	}
 	.user-feed {
-		height: 100%;
+		min-width: 668px;
 		overflow-y: auto;
-		width: columns(4);
-		@include last;
 	}
 }
 
@@ -190,7 +203,6 @@ div[role='feed-header'] {
 	@include row;
 	@include border-box;
 	border-bottom: 1px solid $grey20;
-	border-left: 1px solid $grey20;
 	padding: 7px;
 	background-color: $white;
 	display: table;
@@ -215,6 +227,8 @@ div[role='feed-header'] {
 */
 
 .footer {
+	border-right: 1px solid $grey20;
+	border-left: 1px solid $grey20;
 	background-color: $white;
 	margin: 0;
 	padding: 10px;

@@ -15,6 +15,7 @@
 			<section class="welcome">
 				<h1>Welcome</h1>
 				<ul role='links'>
+					<li><img id="logo" src="./closedLogo.png" height="20px" alt="small logo" /></li>
 					<li><img id="slider" src="./img/arrowDown.png" height="16px" alt="down" /></li>
 				</ul>
 			</section>
