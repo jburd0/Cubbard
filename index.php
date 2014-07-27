@@ -21,10 +21,10 @@
 			</section>
 
 			<div class="login">
-				<form name="login" action="" method="POST">
+				<form name="login" action="./account.php" method="POST">
 				<h3 for="login">Login</h3>
-					<input class="nonRequired" type="test" name="email" value="email" autocomplete="off" />
-					<input class="nonRequired" type="password" name="password" value="password" autocomplete="off" />
+					<input class="required" type="test" name="login-email" value="email" autocomplete="off" />
+					<input class="required" type="password" name="login-password" value="password" autocomplete="off" />
 					<input type="submit" value="login" />
 				</form>
 			</div>
@@ -32,12 +32,12 @@
 			<section class="sign-up">
 				<div class="suWrap">
 					<h2>Sign Up</h2>
-					<form action="" method="POST" name="sign-up">
-						<input class="required" type="text" name="fname" value="First Name" autocomplete="off" /><input role="status" value="" disabled/>
-						<input class="required" type="text" name="lname" value="Last Name" autocomplete="off" /><input role="status" value="" disabled/>
-						<input class="required" type="text" name="email" value="Email" autocomplete="off" /><input role="status" value="" disabled/>
-						<input class="required" type="text" name="confim-email" value="Confirm Email" autocomplete="off" /><input role="status" value="" disabled/>
-						<input class="required" type="password" name="password" value="Password" autocomplete="off" /><input role="status" value="" disabled/>
+					<form action="./account.php" method="POST" name="sign-up">
+						<input class="required" type="text" name="fname" value="First Name" autocomplete="off" /><input for="fname" role="status" value="" disabled/>
+						<input class="required" type="text" name="lname" value="Last Name" autocomplete="off" /><input for="lname" role="status" value="" disabled/>
+						<input class="required" type="text" name="email" value="Email" autocomplete="off" /><input for="email" role="status" value="" disabled/>
+						<input class="required" type="text" name="confim-email" value="Confirm Email" autocomplete="off" /><input for="confirm-email" role="status" value="" disabled/>
+						<input class="required" type="password" name="password" value="Password" autocomplete="off" /><input for="password" role="status" value="" disabled/>
 						<input type="submit" value="Sign Up" />
 					</form>
 				</div>

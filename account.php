@@ -15,8 +15,8 @@
 			<section class="welcome">
 				<ul role="user-display">
 					<li><img src="./img/garren_ijames_777.jpg" height="40px" width="40px" alt="profile picture"/></li>
-					<li><h1><a href="">Garren Ijames</a></h1></li>
-					<li><a href="">logout</a></li>
+					<li><h1>Garren Ijames</h1></li>
+					<li><a href="./index.php">logout</a></li>
 					<li><a href="">logout</a></li>
 				</ul>
 				<ul role="links">

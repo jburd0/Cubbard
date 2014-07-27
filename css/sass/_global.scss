@@ -12,6 +12,10 @@
 
 .container {
 	margin: 0 auto;
+	border-right: 1px solid $grey20;
+	border-left: 1px solid $grey20;
+	border-bottom: 1px solid $grey20;
+	border-top: none;
 }
 
 /*
@@ -36,18 +40,28 @@ ul[role='links'], ul[role='user-display'], ul[role='tool-box'] {
 		padding-right: 10px;
 
 		h1 {
+			color: $grey90;
 			display: inline;
 		}
 	}
 
 	a {
 		text-decoration: none;
-		color: $base-color;
+		color: $grey50;
+
+		&:hover {
+			color: $black;
+			text-decoration: underline;
+		}
 	}
 }
 
 ul[role='links'] {
-		text-align: right; 
+	text-align: right; 
+
+	#slider {
+		cursor: pointer;
+	}
 }
 
 ul[role='user-display'] {
@@ -91,7 +105,6 @@ form[name="login"] {
 
 .sign-up {
 	background-color: $white;
-	border-radius: 3px;
 
 	& > div {
 		@include border-box;
@@ -126,6 +139,12 @@ form[name="sign-up"] {
 	}
 	input[type="submit"] {
 		color: $white;
+	}
+	input[role='status'] {
+		color: red;
+		font-size: 20px;
+		font-weight: bold;
+		font-family: "Times New Roman";
 	}
 }
 

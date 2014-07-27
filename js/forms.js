@@ -8,7 +8,7 @@ $(document).ready(function() {
 	// disable form submit by setting 'formValid' bool to false
 	//
 	var formValid = false;
-	$("form[name='sign-up'] input[type='submit']").click(function(event) {
+	$("form[name='sign-up'] input[type='submit'], form[name='login'] input[type='submit']").click(function(event) {
 		event.preventDefault();
 	});	
 	//
@@ -28,28 +28,31 @@ $(document).ready(function() {
 		}
 	});
 	$('.required').blur(function() {
+		var fetchName = $(this).attr('name');
+		var thisAppend = $("input[for='" + fetchName + "']")
 		if($(this).val() == '' || $(this).val() == $(this).data('value')) {
 			$(this).css({"border" : "2px solid #c35151", "background-color" : "#e8bfbf"});
 			$(this).val($(this).data('value'));
+			thisAppend.val("!");
 			// return a false value
 			$(this).data('isSet', false);
 		} else {
 			// form is complete 
 			$(this).data('isSet', true);
 			$(this).css({"border" : "2px solid #666666", "background-color" : "white"});
+			thisAppend.val("");
 		}
 		//
 		// we assume all fields are empty or not filled out correctly
 		// then for every input field that IS filled out correctly,
 		// we deincrement the integer variable 'totalEmpty' 
 		//
-		var totalEmpty = 5;
-		var totalFull = 0; 
+		var name = $(this).parent().attr('name');
+		var totalEmpty = $("form[name=" + "'" + name + "'" + "] .required").length;
 		$(".required").each(function() {
 			if($(this).data('isSet') == true) {
-				// increment counter?
+				// deincrement counter
 				totalEmpty--;
-				totalFull++;
 			}
 		});
 		//
@@ -61,7 +64,7 @@ $(document).ready(function() {
 		// enable if and only if, the total amount of empty fields equals zero
 		// and the total amount of completed fields equals five
 		//
-		if(totalEmpty == 0 | totalFull == 5) {
+		if(totalEmpty == 0) {
 			formValid = true;
 		} else {
 			formValid = false;
@@ -73,11 +76,11 @@ $(document).ready(function() {
 		// if the form is completed, allow the form to be submit
 		//
 		if(!formValid) {
-			$("form[name='sign-up'] input[type='submit']").click(function(event) {
+			$("form[name='sign-up'] input[type='submit'], form[name='login'] input[type='submit']").click(function(event) {
 				event.preventDefault();
 			});
 		} else {
-			$("form[name='sign-up'] input[type='submit']").unbind('click');
+			$("form[name='sign-up'] input[type='submit'], form[name='login'] input[type='submit']").unbind('click');
 		}
 	});
 });

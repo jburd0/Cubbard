@@ -126,7 +126,11 @@ input[type="submit"] {
     clear: both; }
 
 .container {
-  margin: 0 auto; }
+  margin: 0 auto;
+  border-right: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  border-top: none; }
 
 /*
 * welcome section (for logged on user and index page
@@ -145,13 +149,19 @@ ul[role='links'], ul[role='user-display'], ul[role='tool-box'] {
     display: inline;
     padding-right: 10px; }
     ul[role='links'] li h1, ul[role='user-display'] li h1, ul[role='tool-box'] li h1 {
+      color: #1a1a1a;
       display: inline; }
   ul[role='links'] a, ul[role='user-display'] a, ul[role='tool-box'] a {
     text-decoration: none;
-    color: #4d4d4d; }
+    color: gray; }
+    ul[role='links'] a:hover, ul[role='user-display'] a:hover, ul[role='tool-box'] a:hover {
+      color: black;
+      text-decoration: underline; }
 
 ul[role='links'] {
   text-align: right; }
+  ul[role='links'] #slider {
+    cursor: pointer; }
 
 ul[role='user-display'] {
   text-align: left; }
@@ -183,8 +193,7 @@ form[name="login"] {
 * -- sign-up section --
 */
 .sign-up {
-  background-color: white;
-  border-radius: 3px; }
+  background-color: white; }
   .sign-up > div {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -210,6 +219,11 @@ form[name="sign-up"] input[name="lname"] {
   margin: 0; }
 form[name="sign-up"] input[type="submit"] {
   color: white; }
+form[name="sign-up"] input[role='status'] {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Times New Roman"; }
 
 /*
 * -- footer --
