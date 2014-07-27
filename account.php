@@ -17,28 +17,45 @@
 					<li><img src="./img/garren_ijames_777.jpg" height="40px" width="40px" alt="profile picture"/></li>
 					<li><h1>Garren Ijames</h1></li>
 					<li><a href="./index.php">logout</a></li>
-					<li><a href="">logout</a></li>
 				</ul>
 				<ul role="links">
 					<li><img id="slider" src="./img/arrowDown.png" height="16px" /></li>
 				</ul>
-			</section>
+			</section> <!-- .welcome -->
 
 			<section class="user-utils">
 				<ul role='tool-box'>
-					<li><a href="">link</a></li>
-					<li><a href="">link</a></li>
+					<li>mail (<a role="mail-box" href="">3</a>)</li>
+					<li><a href="">rummage</a></li>
 					<li><a href="">link</a></li>
 					<li><a href="">link</a></li>
 				</ul>
+			</section> <!-- end .user-utils -->
+
+			<section class="user-profile">
+				<div class="user-info">
+				</div>
+				<div class="user-feed">
+					<div role="feed-header">
+						<h1>My Shelf</h1>
+						<form name="feed-filter" action="" method="POST">
+							<select name="filter-select">
+								<option selected disabled value="">filter</option>
+								<option value="saved">saved</option>
+								<option value="pending">pending</option>
+							</select>
+						</form>
+					</div>
+
+				</div>
+			</section> <!-- end .user-profile -->
+
+			<section class="footer">
+				<p>Copyright 2014 Cubbard</p>
+				<p>A John Burd - Garren Ijames production</p>
 			</section>
 
 		</section> <!-- end section.main -->
-
-		<section class="footer">
-			<p>Copyright 2014 Cubbard</p>
-			<p>A John Burd - Garren Ijames production</p>
-		</section>
 
 	</div> <!-- end div.container -->
 </body>

@@ -42,16 +42,16 @@
 					</form>
 				</div>
 				<div class="suDisplay">
-
+					<h1>This is where we will place an ad</h1>
 				</div>
 			</section>
 
-		</section> <!-- end section.main -->
+			<section class="footer">
+				<p>Copyright 2014 Cubbard</p>
+				<p>A John Burd - Garren Ijames production</p>
+			</section>
 
-		<section class="footer">
-			<p>Copyright 2014 Cubbard</p>
-			<p>A John Burd - Garren Ijames production</p>
-		</section>
+		</section> <!-- end section.main -->
 
 	</div> <!-- end div.container -->
 </body>

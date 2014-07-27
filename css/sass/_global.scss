@@ -2,7 +2,10 @@
 * main content for the Cubbard
 */
 
-.container, .welcome, .login, .sign-up, .footer, .login, .user-utils {
+.container, .welcome,
+.login, .sign-up,
+.user-utils, .user-profile,
+.footer {
 	width: 100%;
 	max-width: 1000px;
 	@include row;
@@ -12,10 +15,7 @@
 
 .container {
 	margin: 0 auto;
-	border-right: 1px solid $grey20;
-	border-left: 1px solid $grey20;
-	border-bottom: 1px solid $grey20;
-	border-top: none;
+	border: none;
 }
 
 /*
@@ -66,16 +66,17 @@ ul[role='links'] {
 
 ul[role='user-display'] {
 		text-align: left; 
-
 }
 
-/*
-* user-utils section
-*/
+ul[role='tool-box'] {
 
-.user-utils {
-	padding: 10px;
-	background-color: $white;
+	li a[role='mail-box'] {
+	 color: #f89c9c;
+
+		&:hover {
+			color: #f90a0a;
+		}
+	}
 }
 
 /*
@@ -108,10 +109,11 @@ form[name="login"] {
 
 	& > div {
 		@include border-box;
-		padding: 20px;
+		padding: 19px;
 	}
 	.suWrap {
 		width: columns(2.5);
+		border-right: 1px solid $grey20;
 	}
 	.suDisplay {
 		width: columns(3.5);
@@ -145,6 +147,66 @@ form[name="sign-up"] {
 		font-size: 20px;
 		font-weight: bold;
 		font-family: "Times New Roman";
+	}
+}
+
+/*
+* user-utils section
+*/
+
+.user-utils {
+	padding: 10px;
+	background-color: $white;
+	margin-bottom: 10px;
+}
+
+/*
+* -- user-profile section --
+*/
+
+.user-profile {
+	margin-bottom: 10px;
+	height: 777px;
+
+	& > div {
+		@include border-box;
+	}
+	.user-info {
+		height: 100%;
+		width: columns(2);
+		border-right: 1px solid $grey20;
+		background-color: $white;
+		padding: 10px;
+	}
+	.user-feed {
+		height: 100%;
+		overflow-y: auto;
+		width: columns(4);
+		@include last;
+	}
+}
+
+div[role='feed-header'] {
+	@include row;
+	@include border-box;
+	border-bottom: 1px solid $grey20;
+	border-left: 1px solid $grey20;
+	padding: 7px;
+	background-color: $white;
+	display: table;
+
+	h1, form[name='feed-filter'] {
+		vertical-align: middle;
+		display: table-cell;
+	}
+	h1 {
+		text-align: right;
+		padding-right: 10px;
+		font-size: 1.5em;
+		margin-right: 10px;
+	}
+	form[name='feed-filter'] {
+		margin: 0;
 	}
 }
 
