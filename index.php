@@ -8,9 +8,8 @@
 <script src="./js/logo.js"></script>
 </head>
 <body>
-<?php include("header.php"); ?>
 	<div class="container">
-
+		<?php include("header.php"); ?>
 		<section class="main">
 
 			<section class="welcome">

@@ -4,6 +4,7 @@
 
 .header { //the banner containing the "Cubbard" logo
 	width: 100%;
+	max-width: 1000px;
 	height: 220px;
 	margin-top: -218px;
 	@include border-box;
