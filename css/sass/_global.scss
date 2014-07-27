@@ -179,24 +179,21 @@ form[name="sign-up"] {
 	border: 1px solid $grey20;
 	margin-bottom: 10px;
 	height: 777px;
-	display: table;
 
 	& > div {
 		@include border-box;
-		display: table-cell;
-		margin: 0;
-		height: 777px;
+		height: 100%;
 	}
 	.user-info {
-		width: 330px;
-		max-width: 330px;
+		width: columns(2);
 		border-right: 1px solid $grey20;
 		background-color: $white;
 		padding: 10px;
 	}
 	.user-feed {
-		width: 668px;
-		max-width: 668px;
+		width: columns(4);
+		border-left: 1px solid $grey20;
+		@include last;
 		overflow-y: auto;
 	}
 }

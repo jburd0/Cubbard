@@ -262,24 +262,22 @@ form[name="sign-up"] input[role='status'] {
   max-width: 1000px;
   border: 1px solid #cccccc;
   margin-bottom: 10px;
-  height: 777px;
-  display: table; }
+  height: 777px; }
   .user-profile > div {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    display: table-cell;
-    margin: 0;
-    height: 777px; }
+    height: 100%; }
   .user-profile .user-info {
-    width: 330px;
-    max-width: 330px;
+    width: 32%;
     border-right: 1px solid #cccccc;
     background-color: white;
     padding: 10px; }
   .user-profile .user-feed {
-    width: 668px;
-    max-width: 668px;
+    width: 66%;
+    border-left: 1px solid #cccccc;
+    margin-right: 0;
+    float: right;
     overflow-y: auto; }
 
 div[role='feed-header'] {
