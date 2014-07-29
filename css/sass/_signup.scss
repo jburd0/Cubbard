@@ -1,0 +1,92 @@
+
+/**
+  login form and container
+  ============================================================================ */
+
+.login {
+	border-left: 1px solid $grey20;
+	border-right: 1px solid $grey20;
+	border-bottom: 1px solid $grey20;
+	background-color: $white;
+	padding: 10px;
+	text-align: right;
+	margin-bottom: 10px;
+}
+
+h3[for="login"] {
+	font-weight: bold;
+	display: inline;
+}
+
+form[name="login"] {
+	display: inline;
+	margin: 0;
+
+}
+
+/**
+  sign-up section
+  ============================================================================ */
+
+.sign-up {
+	background-color: $white;
+	border-right: 1px solid $grey20;
+	border-top: 1px solid $grey20;
+	border-left: 1px solid $grey20;
+
+	& > div {
+		@include border-box;
+		padding: 19px;
+	}
+	.suWrap {
+		width: columns(2.5);
+		border-right: 1px solid $grey20;
+	}
+	.suDisplay {	
+		width: columns(3.5);
+		@include last;
+	}
+
+}
+
+form[name="sign-up"] {
+
+	input[type="text"], input[type="password"] {
+		display: inline;
+		margin-bottom: 10px;
+		width: 95%;
+	}
+	input[name="fname"], input[name="lname"] {
+		margin: 0 0 10px 0;
+		width: 44.5%;
+	}
+	input[name="fname"] {
+		margin-right: 0; 
+	}
+	input[name="lname"] {
+		margin: 0;
+	}
+	input[type="submit"] {
+		color: $white;
+	}
+	input[role='status'] {
+		display: inline;
+		color: red;
+		font-size: 20px;
+		font-weight: bold;
+	}
+}
+
+/**
+  input fields that will hold the red exclamation points
+  if the field is not completed properly
+  */
+
+input[role='status'] {
+	border: none;
+	display: inline-block;
+	margin: 0;
+	height: 35px;
+	width: 5%;
+}
+

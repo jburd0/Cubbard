@@ -1,6 +1,7 @@
-/*
-* -- main content for the Cubbard -
-*/
+
+/**
+  ('global') instructions for the Cubbard project  
+  ============================================================================ */
 
 .container, .welcome,
 .login, .sign-up,
@@ -18,9 +19,64 @@
 	border: none;
 }
 
-/*
-* -- welcome section --
-*/
+/**
+  section.header  
+  ============================================================================ */
+
+.header { //the banner containing the "Cubbard" logo
+	width: 100%;
+	max-width: 1000px;
+	height: 220px;
+	@include border-box;
+	padding: 10px 0;
+	font-family: sans-serif;
+	text-align: center;
+	background-color: $grey80;
+
+	h2 {
+		color: $grey80;
+	}
+	img[role='mainLogo'] {
+		cursor: pointer;
+	}
+}
+
+[role="navigation"] {
+	@include row;
+	@include border-box;
+	padding: 10px;
+	margin-bottom: 5px;
+}
+
+/**
+  general layout for forms and input fields  
+  ============================================================================ */
+
+input {
+	outline-width: 0;
+	border: none;
+	border: 2px solid $grey40; 
+	height: 35px;
+	font-size: 16px;
+	border-radius: 3px;
+	@include border-box; 
+	padding: 3px;
+	color: $grey50;
+}
+
+input[type="submit"] {
+	cursor: pointer;
+	border: none;
+	background-color: $grey80;
+	color: $white;
+	font-size: 16px;
+	padding: 3px;
+	border-radius: 3px;
+}
+
+/**
+  welcome section  
+  ============================================================================ */
 
 .welcome {
 	border-left: 1px solid $grey20;
@@ -30,214 +86,9 @@
 	display: table;
 }
 
-ul[role='user-display'], ul[role='tool-box'] {
-	list-style-type: none;
-	display: table-cell;
-	vertical-align: middle;
-	padding: 0;
-
-	li {
-		display: inline;
-		padding-right: 10px;
-
-		h1 {
-			color: $grey90;
-			display: inline;
-		}
-	}
-
-	a {
-		text-decoration: none;
-		color: $grey50;
-
-		&:hover {
-			color: $black;
-			text-decoration: underline;
-		}
-	}
-}
-
-ul[role='user-display'] {
-		text-align: right; 
-}
-
-ul[role='tool-box'] {
-
-	li a[role='mail-box'] {
-	 color: #f89c9c;
-
-		&:hover {
-			color: #f90a0a;
-		}
-	}
-}
-
-/*
-* -- login section --
-*/
-
-.login {
-	border-left: 1px solid $grey20;
-	border-right: 1px solid $grey20;
-	border-bottom: 1px solid $grey20;
-	background-color: $white;
-	padding: 10px;
-	text-align: right;
-	margin-bottom: 10px;
-}
-
-h3[for="login"] {
-	font-weight: bold;
-	display: inline;
-}
-
-form[name="login"] {
-	display: inline;
-	margin: 0;
-
-}
-
-/*
-* -- sign-up section --
-*/
-
-.sign-up {
-	background-color: $white;
-	border-right: 1px solid $grey20;
-	border-top: 1px solid $grey20;
-	border-left: 1px solid $grey20;
-
-	& > div {
-		@include border-box;
-		padding: 19px;
-	}
-	.suWrap {
-		width: columns(2.5);
-		border-right: 1px solid $grey20;
-	}
-	.suDisplay {	
-		width: columns(3.5);
-		@include last;
-	}
-
-}
-
-form[name="sign-up"] {
-
-	input[type="text"], input[type="password"] {
-		display: inline;
-		margin-bottom: 10px;
-		width: 95%;
-	}
-	input[name="fname"], input[name="lname"] {
-		margin: 0 0 10px 0;
-		width: 44.5%;
-	}
-	input[name="fname"] {
-		margin-right: 0; 
-	}
-	input[name="lname"] {
-		margin: 0;
-	}
-	input[type="submit"] {
-		color: $white;
-	}
-	input[role='status'] {
-		display: inline;
-		color: red;
-		font-size: 20px;
-		font-weight: bold;
-		font-family: "Times New Roman";
-	}
-}
-
-/*
-* user-utils section
-*/
-
-.user-utils {
-	border-left: 1px solid $grey20;
-	border-right: 1px solid $grey20;
-	padding: 10px;
-	background-color: $white;
-	margin-bottom: 10px;
-}
-
-/*
-* -- user-profile section --
-*/
-
-.user-profile {
-	width: 100%;
-	max-width: 1000px;
-	border: 1px solid $grey20;
-	margin-bottom: 10px;
-	height: 777px;
-
-	& > div {
-		@include border-box;
-		height: 100%;
-	}
-	.user-info {
-		width: columns(1);
-		padding: 10px;
-	}
-	.user-feed {
-		width: columns(5);
-		border-left: 1px solid $grey20;
-		@include last;
-		overflow-y: auto;
-	}
-}
-
-div[role='feed-header'] {
-	@include row;
-	@include border-box;
-	border-bottom: 1px solid $grey20;
-	padding: 7px;
-	background-color: $white;
-
-	h1, form[name='feed-filter'] {
-		vertical-align: middle;
-		display: inline;
-	}
-	h1 {
-		font-size: 1.5em;
-		margin-right: 10px;
-	}
-	form[name='feed-filter'] {
-		margin: 0;
-	}
-}
-
-.post-status {
-	@include border-box;
-	padding: 10px;
-	background-color: $white;
-	border-bottom: 1px solid $grey20;
-}
-
-form[name='create-memo'] {
-	margin: 0;
-
-	& > * {
-		vertical-align: middle;
-	}
-	textarea {
-		resize: none;
-		outline-width: 0;
-		border: none;
-		display: inline;
-		margin: 0;
-		color: $grey80;
-		width: 68%;
-		border: 1px solid $grey10;
-	}
-}
-
-/*
-* -- footer --
-*/
+/**
+  footer section  
+  ============================================================================ */
 
 .footer {
 	border-right: 1px solid $grey20;
@@ -247,17 +98,3 @@ form[name='create-memo'] {
 	padding: 10px;
 	text-align: center;
 }
-
-/*
-* universal rules for form input elements
-*/
-
-
-input[role='status'] {
-	border: none;
-	display: inline-block;
-	margin: 0;
-	height: 35px;
-	width: 5%;
-}
-

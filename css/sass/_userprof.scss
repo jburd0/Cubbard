@@ -1,0 +1,132 @@
+/**
+  instructions for the user's account page  
+  ============================================================================ */
+
+.user-utils {
+	border-left: $base-border;
+	border-right: $base-border;
+	padding: 10px;
+	background-color: $white;
+	margin-bottom: 10px;
+}
+
+ul[role='user-display'], ul[role='tool-box'] {
+	list-style-type: none;
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0;
+
+	li {
+		display: inline;
+		padding-right: 10px;
+
+		h1 {
+			color: $grey90;
+			display: inline;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: $grey50;
+
+		&:hover {
+			color: $black;
+			text-decoration: underline;
+		}
+	}
+}
+
+/**
+  toggle user profile picture, logout
+  ============================================================================ */
+
+ul[role='user-display'] {
+		text-align: right; 
+}
+
+/**
+  mail, rummage, etc
+  ============================================================================ */
+
+ul[role='tool-box'] {
+
+	li a[role='mail-box'] {
+	 color: #f89c9c;
+
+		&:hover {
+			color: #f90a0a;
+		}
+	}
+}
+
+/**
+  the meat and potatoes of the user's account page, that is to say, the shelf
+  feed, the user's displayed information, the "create memo"" fields
+  ============================================================================ */
+
+.user-profile {
+	border: $base-border;
+	margin-bottom: 10px;
+	height: 777px;
+
+	& > div {
+		height: 100%;
+	}
+	.user-info {
+		width: columns(1);
+		padding: 10px;
+	}
+	.user-feed {
+		width: columns(5);
+		border-left: $base-border;
+		overflow-y: auto;
+		@include last;
+	}
+}
+
+div[role='feed-header'] {
+	@include row;
+	@include border-box;
+	border-bottom: $base-border;
+	padding: 7px;
+	background-color: $white;
+
+	h1, form[name='feed-filter'] {
+		vertical-align: middle;
+		display: inline;
+	}
+	h1 {
+		font-size: 1.5em;
+		margin-right: 10px;
+	}
+	form[name='feed-filter'] {
+		margin: 0;
+	}
+}
+
+.post-status {
+	@include border-box;
+	padding: 10px;
+	background-color: $white;
+	border-bottom: $base-border;
+}
+
+form[name='create-memo'] {
+	margin: 0;
+
+	& > * {
+		vertical-align: middle;
+	}
+	textarea {
+		resize: none;
+		outline-width: 0;
+		border: none;
+		display: inline;
+		margin: 0;
+		color: $grey80;
+		width: 68%;
+		border: $base-border;
+	}
+}
+
