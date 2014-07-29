@@ -1,0 +1,54 @@
+// the rules that will define my grid
+
+$max-width:	1000px;		// set the max width for the page
+$column-width:	15%;		// set the minimum column width (6 columns)
+$gutter-width:	2%;		// the gutter width (that is the side margin for the columns
+$maximum-columns: 6;		//set the max number of columns
+
+@function columns($columns, $container-columns: $maximum-columns) {
+	$width: $columns * $column-width + ($columns - 1 ) * $gutter-width;
+	$container-width: $container-columns * $column-width + ($container-columns - 1) * $gutter-width;
+	@return percentage($width / $container-width);
+}
+
+@function gutter($container-columns: $maximum-columns, $gutter: $gutter-width) {
+	$container-width: $container-columns * $column-width + ($container-columns - 1) * $gutter-width;
+	@return percentage($gutter /$container-width);
+}
+
+@mixin row {
+	width: 100%;
+	max-width: $max-width;
+	margin: 0 auto;
+	& > div { // affects only direct children elements
+		float: left;
+		margin-right: gutter();
+		@include border-box;
+	}
+	@include clearfix;
+}
+
+@mixin nesting {
+	padding: 0;
+}
+
+@function offset-columns($columns) {
+	$margin: $columns * $column-width + $columns * $gutter-width;
+	@return $margin;
+}
+
+@mixin offset($from-direction, $columns) {
+	@if $from-direction == left {
+		float: left;
+		margin-left: offset-columns($columns);
+	}
+	@if $from-direction == right {
+		float: right;
+		margin-right: offset-columns($columns);
+	}
+}
+			
+@mixin last {
+	margin-right: 0;
+	float: right;
+}
