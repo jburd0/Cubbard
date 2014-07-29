@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="./css/style.css" />
 <link rel="shortcut icon" href="./favicon.ico" />
 <script src="./js/jquery.js"></script>
-<script src="./js/forms.js"></script>
 <script src="./js/logo.js"></script>
+<script src="./js/userEdit.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -30,6 +30,18 @@
 
 			<section class="user-profile">
 				<div class="user-info">
+					<h3>User Information</h3>
+					<form name="edit-user-info" action="" method="POST">
+						<input class="edit" type="text" name="name" value="Name:" disabled />
+						<input class="edit-info-field" type="text" name="name-edit" value="Garren Ijames" disabled /><button class="field-trigger" for="name">+</button>
+						<input class="edit" type="text" name="name" value="Email:" disabled />
+						<input class="edit-info-field" type="text" name="email-edit" value="test@test.com" disabled /><button class="field-trigger" for="email">+</button>
+						<input class="edit" type="text" name="gender" value="Gender:" disabled />
+						<input class="edit-info-field" type="text" name="gender-edit" value="Male" disabled /><button class="field-trigger" for="gender">+</button>
+						<input class="edit" type="text" name="name" value="Occupation:" disabled />
+						<input class="edit-info-field" type="text" name="occupation-edit" value="Web Developer" disabled /><button class="field-trigger" for="occupation">+</button>
+						<input type="submit" value="Save" />
+					</form>
 				</div>
 				<div class="user-feed">
 					<div role="feed-header">

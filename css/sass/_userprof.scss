@@ -71,14 +71,20 @@ ul[role='tool-box'] {
 	height: 777px;
 
 	& > div {
+		margin: 0;
 		height: 100%;
 	}
 	.user-info {
-		width: columns(1);
-		padding: 10px;
+		background-color: $white;
+		width: 20%;
+		padding: 5px;
+
+		h3 {
+			border-bottom: $base-border;
+		}
 	}
 	.user-feed {
-		width: columns(5);
+		width: 80%;
 		border-left: $base-border;
 		overflow-y: auto;
 		@include last;
@@ -130,3 +136,45 @@ form[name='create-memo'] {
 	}
 }
 
+/**
+  information editing form and fields
+*/
+
+form[name='edit-user-info'] {
+	margin: 0;
+	padding: 0;
+	@include clearfix;
+	padding-bottom: 10px;
+	border-bottom: $base-border;
+
+	& > * {
+		float: left;
+		vertical-align: middle;
+	}
+	.edit {
+		background: transparent;
+		padding: 0;
+		border: none;
+		color: $black;
+		width: 100%;
+	}
+	.edit-info-field {
+		height: inherit;
+		background: transparent;
+		border: none;
+		color: $grey80;
+		width: 80%;
+		padding: 0;
+		font-size: 16px;
+	}
+	.field-trigger {
+		width: 20%;
+		border: none;
+		margin-right: 0;
+		@include last;
+	}
+	input[type='submit'] {
+		background-color: #35f847;
+		width: 100%;
+	}
+}
