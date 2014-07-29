@@ -1,0 +1,24 @@
+/* main style for test.php */
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: hsl(0, 0%, 90%);
+}
+
+.wrap {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+section[role='header'] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	background-color: hsl(0, 0%, 100%);
+	text-align: center;
+	font-family: sans-serif;
+	box-shadow: 0 0 5px black;
+	border-radius: 10px;
+}

@@ -19,17 +19,12 @@
 					<li><h1>Garren Ijames</h1></li>
 					<li><a href="./index.php">logout</a></li>
 				</ul>
-				<ul role="links">
-					<li><img id="slider" src="./img/arrowDown.png" height="16px" /></li>
-				</ul>
 			</section> <!-- .welcome -->
 
 			<section class="user-utils">
 				<ul role='tool-box'>
 					<li>mail (<a role="mail-box" href="">3</a>)</li>
 					<li><a href="">rummage</a></li>
-					<li><a href="">link</a></li>
-					<li><a href="">link</a></li>
 				</ul>
 			</section> <!-- end .user-utils -->
 
@@ -46,6 +41,8 @@
 								<option value="pending">pending</option>
 							</select>
 						</form>
+					</div>
+					<div class="post-status">
 					</div>
 
 				</div>

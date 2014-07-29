@@ -1,5 +1,5 @@
 /*
-* main content for the Cubbard
+* -- main content for the Cubbard -
 */
 
 .container, .welcome,
@@ -19,7 +19,7 @@
 }
 
 /*
-* welcome section (for logged on user and index page
+* -- welcome section --
 */
 
 .welcome {
@@ -31,7 +31,7 @@
 
 }
 
-ul[role='links'], ul[role='user-display'], ul[role='tool-box'] {
+ul[role='user-display'], ul[role='tool-box'] {
 	list-style-type: none;
 	display: table-cell;
 	vertical-align: middle;
@@ -58,14 +58,6 @@ ul[role='links'], ul[role='user-display'], ul[role='tool-box'] {
 	}
 }
 
-ul[role='links'] {
-	text-align: right; 
-
-	#slider {
-		cursor: pointer;
-	}
-}
-
 ul[role='user-display'] {
 		text-align: left; 
 }
@@ -82,15 +74,17 @@ ul[role='tool-box'] {
 }
 
 /*
-* login section
+* -- login section --
 */
 
 .login {
 	border-left: 1px solid $grey20;
 	border-right: 1px solid $grey20;
+	border-bottom: 1px solid $grey20;
 	background-color: $white;
 	padding: 10px;
 	text-align: right;
+	margin-bottom: 10px;
 }
 
 h3[for="login"] {
@@ -111,6 +105,7 @@ form[name="login"] {
 .sign-up {
 	background-color: $white;
 	border-right: 1px solid $grey20;
+	border-top: 1px solid $grey20;
 	border-left: 1px solid $grey20;
 
 	& > div {
@@ -185,13 +180,11 @@ form[name="sign-up"] {
 		height: 100%;
 	}
 	.user-info {
-		width: columns(2);
-		border-right: 1px solid $grey20;
-		background-color: $white;
+		width: columns(1);
 		padding: 10px;
 	}
 	.user-feed {
-		width: columns(4);
+		width: columns(5);
 		border-left: 1px solid $grey20;
 		@include last;
 		overflow-y: auto;
@@ -204,21 +197,25 @@ div[role='feed-header'] {
 	border-bottom: 1px solid $grey20;
 	padding: 7px;
 	background-color: $white;
-	display: table;
 
 	h1, form[name='feed-filter'] {
 		vertical-align: middle;
-		display: table-cell;
+		display: inline;
 	}
 	h1 {
-		text-align: right;
-		padding-right: 10px;
 		font-size: 1.5em;
 		margin-right: 10px;
 	}
 	form[name='feed-filter'] {
 		margin: 0;
 	}
+}
+
+.post-status {
+	@include border-box;
+	padding: 10px;
+	background-color: $white;
+	border-bottom: 1px solid $grey20;
 }
 
 /*

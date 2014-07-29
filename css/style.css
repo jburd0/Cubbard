@@ -21,7 +21,6 @@ p {
   width: 100%;
   max-width: 1000px;
   height: 220px;
-  margin-top: -218px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -101,7 +100,7 @@ input[type="submit"] {
   border-radius: 3px; }
 
 /*
-* main content for the Cubbard
+* -- main content for the Cubbard -
 */
 .container, .welcome,
 .login, .sign-up,
@@ -146,7 +145,7 @@ input[type="submit"] {
   border: none; }
 
 /*
-* welcome section (for logged on user and index page
+* -- welcome section --
 */
 .welcome {
   border-left: 1px solid #cccccc;
@@ -155,28 +154,23 @@ input[type="submit"] {
   background-color: white;
   display: table; }
 
-ul[role='links'], ul[role='user-display'], ul[role='tool-box'] {
+ul[role='user-display'], ul[role='tool-box'] {
   list-style-type: none;
   display: table-cell;
   vertical-align: middle;
   padding: 0; }
-  ul[role='links'] li, ul[role='user-display'] li, ul[role='tool-box'] li {
+  ul[role='user-display'] li, ul[role='tool-box'] li {
     display: inline;
     padding-right: 10px; }
-    ul[role='links'] li h1, ul[role='user-display'] li h1, ul[role='tool-box'] li h1 {
+    ul[role='user-display'] li h1, ul[role='tool-box'] li h1 {
       color: #1a1a1a;
       display: inline; }
-  ul[role='links'] a, ul[role='user-display'] a, ul[role='tool-box'] a {
+  ul[role='user-display'] a, ul[role='tool-box'] a {
     text-decoration: none;
     color: gray; }
-    ul[role='links'] a:hover, ul[role='user-display'] a:hover, ul[role='tool-box'] a:hover {
+    ul[role='user-display'] a:hover, ul[role='tool-box'] a:hover {
       color: black;
       text-decoration: underline; }
-
-ul[role='links'] {
-  text-align: right; }
-  ul[role='links'] #slider {
-    cursor: pointer; }
 
 ul[role='user-display'] {
   text-align: left; }
@@ -187,14 +181,16 @@ ul[role='tool-box'] li a[role='mail-box'] {
     color: #f90a0a; }
 
 /*
-* login section
+* -- login section --
 */
 .login {
   border-left: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
   background-color: white;
   padding: 10px;
-  text-align: right; }
+  text-align: right;
+  margin-bottom: 10px; }
 
 h3[for="login"] {
   font-weight: bold;
@@ -210,6 +206,7 @@ form[name="login"] {
 .sign-up {
   background-color: white;
   border-right: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
   border-left: 1px solid #cccccc; }
   .sign-up > div {
     -webkit-box-sizing: border-box;
@@ -269,12 +266,10 @@ form[name="sign-up"] input[role='status'] {
     box-sizing: border-box;
     height: 100%; }
   .user-profile .user-info {
-    width: 32%;
-    border-right: 1px solid #cccccc;
-    background-color: white;
+    width: 15%;
     padding: 10px; }
   .user-profile .user-feed {
-    width: 66%;
+    width: 83%;
     border-left: 1px solid #cccccc;
     margin-right: 0;
     float: right;
@@ -290,8 +285,7 @@ div[role='feed-header'] {
   box-sizing: border-box;
   border-bottom: 1px solid #cccccc;
   padding: 7px;
-  background-color: white;
-  display: table; }
+  background-color: white; }
   div[role='feed-header'] > div {
     float: left;
     margin-right: 2%;
@@ -305,14 +299,20 @@ div[role='feed-header'] {
     clear: both; }
   div[role='feed-header'] h1, div[role='feed-header'] form[name='feed-filter'] {
     vertical-align: middle;
-    display: table-cell; }
+    display: inline; }
   div[role='feed-header'] h1 {
-    text-align: right;
-    padding-right: 10px;
     font-size: 1.5em;
     margin-right: 10px; }
   div[role='feed-header'] form[name='feed-filter'] {
     margin: 0; }
+
+.post-status {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: white;
+  border-bottom: 1px solid #cccccc; }
 
 /*
 * -- footer --
