@@ -17,10 +17,10 @@
 			</section>
 
 			<div class="login">
-				<form name="login" action="./account.php" method="POST">
+				<form name="login" action="../scripts/login.php" method="POST">
 				<h3 for="login">Login</h3>
-					<input class="required" type="test" name="login-email" value="email" autocomplete="off" />
-					<input class="required" type="password" name="login-password" value="password" autocomplete="off" />
+					<input class="required" type="test" name="loginEmail" value="email" autocomplete="off" />
+					<input class="required" type="password" name="loginPassword" value="password" autocomplete="off" />
 					<input type="submit" value="login" />
 				</form>
 			</div>
@@ -28,7 +28,7 @@
 			<section class="sign-up">
 				<div class="suWrap">
 					<h2>Sign Up</h2>
-					<form action="./account.php" method="POST" name="sign-up">
+					<form action="../scripts/newUser.php" method="POST" name="sign-up">
 						<input class="required" type="text" name="fname" value="First Name" autocomplete="off" /><input for="fname" role="status" value="" disabled/>
 						<input class="required" type="text" name="lname" value="Last Name" autocomplete="off" /><input for="lname" role="status" value="" disabled/>
 						<input class="required" type="text" name="email" value="Email" autocomplete="off" /><input for="email" role="status" value="" disabled/>
