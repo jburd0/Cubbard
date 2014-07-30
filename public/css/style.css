@@ -14,94 +14,9 @@ p {
   margin: 0;
   line-height: 1.309; }
 
-/*
-* Instructions regarding the website header
-*/
-.header {
-  width: 100%;
-  max-width: 1000px;
-  height: 220px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 10px 0;
-  font-family: sans-serif;
-  text-align: center;
-  background-color: #333333; }
-  .header h2 {
-    color: #333333; }
-  .header img[role='mainLogo'] {
-    cursor: pointer; }
-
-[role="navigation"] {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  zoom: 1;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 10px;
-  margin-bottom: 5px; }
-  [role="navigation"] > div {
-    float: left;
-    margin-right: 2%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-  [role="navigation"]:before, [role="navigation"]:after {
-    content: "";
-    display: table; }
-  [role="navigation"]:after {
-    clear: both; }
-
-ul[role="linkBar"] {
-  list-style-type: none;
-  display: inline;
-  float: left;
-  margin: 0;
-  padding: 5px 0;
-  text-align: right; }
-  ul[role="linkBar"] li {
-    display: inline; }
-    ul[role="linkBar"] li a {
-      text-decoration: none; }
-
-form[role="search"] {
-  display: inline;
-  margin: 0;
-  float: right; }
-  form[role="search"] input[type="text"] {
-    border: none; }
-
-/*
-* instructions concerning forms and input fields
-*/
-input {
-  outline-width: 0;
-  border: none;
-  border: 2px solid #999999;
-  height: 35px;
-  font-size: 16px;
-  border-radius: 3px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 3px;
-  color: gray; }
-
-input[type="submit"] {
-  cursor: pointer;
-  border: none;
-  background-color: #333333;
-  color: white;
-  font-size: 16px;
-  padding: 3px;
-  border-radius: 3px; }
-
-/*
-* -- main content for the Cubbard -
-*/
+/**
+  ('global') instructions for the Cubbard project  
+  ============================================================================ */
 .container, .welcome,
 .login, .sign-up,
 .user-utils, .user-profile,
@@ -144,9 +59,74 @@ input[type="submit"] {
   margin: 0 auto;
   border: none; }
 
-/*
-* -- welcome section --
-*/
+/**
+  section.header  
+  ============================================================================ */
+.header {
+  width: 100%;
+  max-width: 1000px;
+  height: 220px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 0;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #333333; }
+  .header h2 {
+    color: #333333; }
+  .header img[role='mainLogo'] {
+    cursor: pointer; }
+
+[role="navigation"] {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  zoom: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 5px; }
+  [role="navigation"] > div {
+    float: left;
+    margin-right: 2%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  [role="navigation"]:before, [role="navigation"]:after {
+    content: "";
+    display: table; }
+  [role="navigation"]:after {
+    clear: both; }
+
+/**
+  general layout for forms and input fields  
+  ============================================================================ */
+input {
+  outline-width: 0;
+  border: none;
+  border: 2px solid #999999;
+  height: 35px;
+  font-size: 16px;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 3px;
+  color: gray; }
+
+input[type="submit"] {
+  margin-top: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: gray;
+  color: white;
+  border-radius: 3px; }
+
+/**
+  welcome section  
+  ============================================================================ */
 .welcome {
   border-left: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
@@ -154,35 +134,20 @@ input[type="submit"] {
   background-color: white;
   display: table; }
 
-ul[role='user-display'], ul[role='tool-box'] {
-  list-style-type: none;
-  display: table-cell;
-  vertical-align: middle;
-  padding: 0; }
-  ul[role='user-display'] li, ul[role='tool-box'] li {
-    display: inline;
-    padding-right: 10px; }
-    ul[role='user-display'] li h1, ul[role='tool-box'] li h1 {
-      color: #1a1a1a;
-      display: inline; }
-  ul[role='user-display'] a, ul[role='tool-box'] a {
-    text-decoration: none;
-    color: gray; }
-    ul[role='user-display'] a:hover, ul[role='tool-box'] a:hover {
-      color: black;
-      text-decoration: underline; }
+/**
+  footer section  
+  ============================================================================ */
+.footer {
+  border-right: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  background-color: white;
+  margin: 0;
+  padding: 10px;
+  text-align: center; }
 
-ul[role='user-display'] {
-  text-align: left; }
-
-ul[role='tool-box'] li a[role='mail-box'] {
-  color: #f89c9c; }
-  ul[role='tool-box'] li a[role='mail-box']:hover {
-    color: #f90a0a; }
-
-/*
-* -- login section --
-*/
+/**
+  login form and container
+  ============================================================================ */
 .login {
   border-left: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
@@ -200,9 +165,9 @@ form[name="login"] {
   display: inline;
   margin: 0; }
 
-/*
-* -- sign-up section --
-*/
+/**
+  sign-up section
+  ============================================================================ */
 .sign-up {
   background-color: white;
   border-right: 1px solid #cccccc;
@@ -238,12 +203,22 @@ form[name="sign-up"] input[role='status'] {
   display: inline;
   color: red;
   font-size: 20px;
-  font-weight: bold;
-  font-family: "Times New Roman"; }
+  font-weight: bold; }
 
-/*
-* user-utils section
-*/
+/**
+  input fields that will hold the red exclamation points
+  if the field is not completed properly
+  */
+input[role='status'] {
+  border: none;
+  display: inline-block;
+  margin: 0;
+  height: 35px;
+  width: 5%; }
+
+/**
+  instructions for the user's account page  
+  ============================================================================ */
 .user-utils {
   border-left: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
@@ -251,29 +226,61 @@ form[name="sign-up"] input[role='status'] {
   background-color: white;
   margin-bottom: 10px; }
 
-/*
-* -- user-profile section --
-*/
+ul[role='user-display'], ul[role='tool-box'] {
+  list-style-type: none;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0; }
+  ul[role='user-display'] li, ul[role='tool-box'] li {
+    display: inline;
+    padding-right: 10px; }
+    ul[role='user-display'] li h1, ul[role='tool-box'] li h1 {
+      color: #1a1a1a;
+      display: inline; }
+  ul[role='user-display'] a, ul[role='tool-box'] a {
+    text-decoration: none;
+    color: gray; }
+    ul[role='user-display'] a:hover, ul[role='tool-box'] a:hover {
+      color: black;
+      text-decoration: underline; }
+
+/**
+  toggle user profile picture, logout
+  ============================================================================ */
+ul[role='user-display'] {
+  text-align: right; }
+
+/**
+  mail, rummage, etc
+  ============================================================================ */
+ul[role='tool-box'] li a[role='mail-box'] {
+  color: #f89c9c; }
+  ul[role='tool-box'] li a[role='mail-box']:hover {
+    color: #f90a0a; }
+
+/**
+  the meat and potatoes of the user's account page, that is to say, the shelf
+  feed, the user's displayed information, the "create memo"" fields
+  ============================================================================ */
 .user-profile {
-  width: 100%;
-  max-width: 1000px;
   border: 1px solid #cccccc;
   margin-bottom: 10px;
   height: 777px; }
   .user-profile > div {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    margin: 0;
     height: 100%; }
   .user-profile .user-info {
-    width: 15%;
-    padding: 10px; }
+    background-color: white;
+    width: 20%;
+    padding: 5px; }
+    .user-profile .user-info h3 {
+      border-bottom: 1px solid #cccccc; }
   .user-profile .user-feed {
-    width: 83%;
+    width: 80%;
     border-left: 1px solid #cccccc;
+    overflow-y: auto;
     margin-right: 0;
-    float: right;
-    overflow-y: auto; }
+    float: right; }
 
 div[role='feed-header'] {
   width: 100%;
@@ -314,23 +321,57 @@ div[role='feed-header'] {
   background-color: white;
   border-bottom: 1px solid #cccccc; }
 
-/*
-* -- footer --
-*/
-.footer {
-  border-right: 1px solid #cccccc;
-  border-left: 1px solid #cccccc;
-  background-color: white;
-  margin: 0;
-  padding: 10px;
-  text-align: center; }
+form[name='create-memo'] {
+  margin: 0; }
+  form[name='create-memo'] > * {
+    vertical-align: middle; }
+  form[name='create-memo'] textarea {
+    resize: none;
+    outline-width: 0;
+    border: none;
+    display: inline;
+    margin: 0;
+    color: #333333;
+    width: 68%;
+    border: 1px solid #cccccc; }
 
-/*
-* universal rules for form input elements
+/**
+  information editing form and fields
 */
-input[role='status'] {
-  border: none;
-  display: inline-block;
+form[name='edit-user-info'] {
   margin: 0;
-  height: 35px;
-  width: 5%; }
+  padding: 0;
+  zoom: 1;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cccccc; }
+  form[name='edit-user-info']:before, form[name='edit-user-info']:after {
+    content: "";
+    display: table; }
+  form[name='edit-user-info']:after {
+    clear: both; }
+  form[name='edit-user-info'] > * {
+    float: left;
+    vertical-align: middle; }
+  form[name='edit-user-info'] .edit {
+    background: transparent;
+    padding: 0;
+    border: none;
+    color: black;
+    width: 100%; }
+  form[name='edit-user-info'] .edit-info-field {
+    height: inherit;
+    background: transparent;
+    border: none;
+    color: #333333;
+    width: 80%;
+    padding: 0;
+    font-size: 16px; }
+  form[name='edit-user-info'] .field-trigger {
+    width: 20%;
+    border: none;
+    margin-right: 0;
+    margin-right: 0;
+    float: right; }
+  form[name='edit-user-info'] input[type='submit'] {
+    background-color: #35f847;
+    width: 100%; }

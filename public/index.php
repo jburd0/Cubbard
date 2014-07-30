@@ -32,7 +32,7 @@
 						<input class="required" type="text" name="fname" value="First Name" autocomplete="off" /><input for="fname" role="status" value="" disabled/>
 						<input class="required" type="text" name="lname" value="Last Name" autocomplete="off" /><input for="lname" role="status" value="" disabled/>
 						<input class="required" type="text" name="email" value="Email" autocomplete="off" /><input for="email" role="status" value="" disabled/>
-						<input class="required" type="text" name="confim-email" value="Confirm Email" autocomplete="off" /><input for="confirm-email" role="status" value="" disabled/>
+						<input class="required" type="text" name="emailConfirm" value="Confirm Email" autocomplete="off" /><input for="confirm-email" role="status" value="" disabled/>
 						<input class="required" type="password" name="password" value="Password" autocomplete="off" /><input for="password" role="status" value="" disabled/>
 						<input type="submit" value="Sign Up" />
 					</form>

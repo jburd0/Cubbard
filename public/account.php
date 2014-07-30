@@ -4,12 +4,46 @@
 <link rel="stylesheet" href="./css/style.css" />
 <link rel="shortcut icon" href="./favicon.ico" />
 <script src="./js/jquery.js"></script>
-<script src="./js/forms.js"></script>
 <script src="./js/logo.js"></script>
+<script src="./js/userEdit.js"></script>
 </head>
 <body>
 	<div class="container">
-	<?php include("header.php"); ?>
+	<?php
+	include("header.php");
+	include("../scripts/functions.php");
+	$firstName = $_POST['fname'];
+	$lastName = $_POST['lname'];
+	$email = $_POST['email'];
+	$emailConfirm = $_POST['emailConfirm'];
+	$password = $_POST['password'];
+
+	// Check if all data is entered
+	if (!$firstName || !$lastName || !$email || !$emailConfirm || !$password) {
+		echo "All data was not submited";
+		exit;
+	}
+	if ($email != $emailConfirm) {
+		echo "Emails did not match.";
+		exit;
+	}
+	// Add slashes to prevet mysql hacking
+	if (!get_magic_quotes_gpc) {
+		addslashes($firstName);
+		addslashes($lastName);
+		addslashes($email);
+		addslashes($password);
+	}
+	$password = md5($password.$salt);
+
+	$query = "INSERT INTO users VALUES ('', '".$firstName."', '".$lastName."', '".$email."', '".$password."')";
+	$result = $db->query($query);
+
+	if(!$result) {
+		echo "An error occured. Please try again.";
+	}
+
+	?>
 
 		<section class="main">
 
@@ -30,6 +64,18 @@
 
 			<section class="user-profile">
 				<div class="user-info">
+					<h3>User Information</h3>
+					<form name="edit-user-info" action="" method="POST">
+						<input class="edit" type="text" name="name" value="Name:" disabled />
+						<input class="edit-info-field" type="text" name="name-edit" value="Garren Ijames" disabled /><button class="field-trigger" for="name">+</button>
+						<input class="edit" type="text" name="name" value="Email:" disabled />
+						<input class="edit-info-field" type="text" name="email-edit" value="test@test.com" disabled /><button class="field-trigger" for="email">+</button>
+						<input class="edit" type="text" name="gender" value="Gender:" disabled />
+						<input class="edit-info-field" type="text" name="gender-edit" value="Male" disabled /><button class="field-trigger" for="gender">+</button>
+						<input class="edit" type="text" name="name" value="Occupation:" disabled />
+						<input class="edit-info-field" type="text" name="occupation-edit" value="Web Developer" disabled /><button class="field-trigger" for="occupation">+</button>
+						<input type="submit" value="Save" />
+					</form>
 				</div>
 				<div class="user-feed">
 					<div role="feed-header">
@@ -43,8 +89,11 @@
 						</form>
 					</div>
 					<div class="post-status">
+						<form name="create-memo" action="" method="POST">
+							<input type="image" src="./img/pen.png" alt="create" />
+							<textarea type="text" name="status" placeholder="By Garren Ijames" autocomplete="off"></textarea> 
+						</form>
 					</div>
-
 				</div>
 			</section> <!-- end .user-profile -->
 
