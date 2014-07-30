@@ -23,7 +23,22 @@ if (!get_magic_quotes_gpc) {
 	addslashes($password);
 }
 $password = md5($password.$salt);
+// check to see if email already exsisits
+$checkEmail = $db->query("SELECT COUNT(*) FROM users WHERE email = '".$email."'");
+if (!$checkEmail) {
+	$status = "Could not update database.";
+	exit;
+}
+$row = mysqli_fetch_row($checkEmail);
+$count = $row[0];
 
+// if email exsists create error
+if ($count > 0) {
+	$status = "Email already in use.";
+	exit;
+}
+
+// if everything passes insert data in to users table
 $query = "INSERT INTO users VALUES ('', '".$firstName."', '".$lastName."', '".$email."', '".$password."')";
 $result = $db->query($query);
 
